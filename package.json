@@ -1,0 +1,91 @@
+{
+  "name": "n8n-nodes-midnight",
+  "version": "1.0.0",
+  "description": "A comprehensive n8n community node for Midnight blockchain providing 7 resources and 25+ operations for querying blocks, transactions, contracts, chain state, network info, DUST tokens, and zero-knowledge proofs. Includes real-time WebSocket triggers.",
+  "license": "BUSL-1.1",
+  "author": {
+    "name": "Velocity BPA",
+    "email": "licensing@velobpa.com",
+    "url": "https://velobpa.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Velocity-BPA/n8n-nodes-midnight.git"
+  },
+  "homepage": "https://github.com/Velocity-BPA/n8n-nodes-midnight#readme",
+  "bugs": {
+    "url": "https://github.com/Velocity-BPA/n8n-nodes-midnight/issues"
+  },
+  "keywords": [
+    "n8n",
+    "n8n-community-node-package",
+    "midnight",
+    "blockchain",
+    "privacy",
+    "zero-knowledge",
+    "cardano",
+    "web3",
+    "graphql",
+    "rpc",
+    "dust",
+    "night-token"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "COMMERCIAL_LICENSE.md",
+    "LICENSING_FAQ.md",
+    "README.md"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/MidnightApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Midnight/Midnight.node.js",
+      "dist/nodes/Midnight/MidnightTrigger.node.js"
+    ]
+  },
+  "scripts": {
+    "build": "tsc && npm run copy:icons",
+    "copy:icons": "copyfiles -u 1 \"nodes/**/*.svg\" \"nodes/**/*.png\" dist/",
+    "dev": "tsc --watch",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write \"**/*.ts\"",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "prepublishOnly": "npm run build",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.0",
+    "@types/ws": "^8.5.10",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.1",
+    "jest": "^29.7.0",
+    "n8n-workflow": "^1.27.0",
+    "prettier": "^3.2.4",
+    "rimraf": "^5.0.5",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "n8n-workflow": ">=1.0.0"
+  },
+  "dependencies": {
+    "ws": "^8.16.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
