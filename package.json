@@ -2,7 +2,7 @@
   "name": "n8n-nodes-midnight",
   "version": "1.0.0",
   "description": "A comprehensive n8n community node for Midnight blockchain providing 7 resources and 25+ operations for querying blocks, transactions, contracts, chain state, network info, DUST tokens, and zero-knowledge proofs. Includes real-time WebSocket triggers.",
-  "license": "BUSL-1.1",
+  "license": "SEE LICENSE IN LICENSE.md",
   "author": {
     "name": "Velocity BPA",
     "email": "licensing@velobpa.com",
@@ -73,7 +73,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-n8n-nodes-base": "^1.16.1",
     "jest": "^29.7.0",
-    "n8n-workflow": "^1.27.0",
+    "n8n-workflow": "1.57.0",
     "prettier": "^3.2.4",
     "rimraf": "^5.0.5",
     "ts-jest": "^29.1.2",
